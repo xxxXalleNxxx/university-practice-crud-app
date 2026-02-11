@@ -36,5 +36,8 @@ jobs:
           SPRING_DATASOURCE_USERNAME: postgres
           SPRING_DATASOURCE_PASSWORD: k.,k.ndj.vfnm
 
+      - name: Build JAR
+        run: mvn clean package -DskipTests
+
       - name: Build Docker image
         run: docker build -t app:ci .
