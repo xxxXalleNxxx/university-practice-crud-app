@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: practice-crud
+    env: docker
+    repo: https://github.com/xxxXalleNxxx/university-practice-crud-app
+    plan: free
+    envVars:
+      - key: SPRING_DATASOURCE_URL
+        value: jdbc:postgresql://postgres:5432/university_practice_db
+      - key: SPRING_DATASOURCE_USERNAME
+        value: postgres
+      - key: SPRING_DATASOURCE_PASSWORD
+        sync: false
+
+databases:
+  - name: postgres
+    plan: free
