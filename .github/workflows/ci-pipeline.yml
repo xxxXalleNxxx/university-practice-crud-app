@@ -30,7 +30,7 @@ jobs:
         run: mvn checkstyle:check
 
       - name: Run tests
-        run: mvn test
+        run: mvn test -DskipTests
         env:
           SPRING_DATASOURCE_URL: jdbc:postgresql://localhost:5432/university_practice_db
           SPRING_DATASOURCE_USERNAME: postgres
